@@ -30,15 +30,32 @@ const promptConsultas = fs.readFileSync(pathConsultas, "utf8");
 
 
 
+const flowVoice = addKeyword(EVENTS.VOICE_NOTE).addAnswer("Escuchando...", null, async (ctx, ctxFn) => {
+    // Obtener el texto de la nota de voz utilizando el manejador de inteligencia artificial
+    const text = await handlerAI(ctx);
 
-const flowVoice = addKeyword(EVENTS.VOICE_NOTE).addAnswer("Esta es una nota de voz", null, async (ctx, ctxFn) => {
-    const text = await handlerAI(ctx)
-    const prompt = promptConsultas
-    const consulta = text
-    const answer = await chat(prompt, consulta)
-    await ctxFn.flowDynamic(answer.content)
-   // console.log(text)
-})
+    // Cargar el prompt para las consultas
+    const prompt = promptConsultas;
+
+    // Combinar el texto de la nota de voz y el prompt para formar la consulta completa
+    const consulta = text;
+
+    // Obtener la respuesta del modelo de chatGPT usando el prompt y la consulta
+    const answer = await chat(prompt, consulta);
+    
+    // Obtener el número del remitente del contexto
+    const senderNumber = ctx.from;
+    
+    // Construir el mensaje de respuesta que incluye la respuesta del modelo y el número del remitente
+    const responseMessage = `${answer.content}\n\nNúmero del remitente: ${senderNumber}`;
+    
+    // Enviar el mensaje de respuesta al remitente
+    await ctxFn.flowDynamic(responseMessage);
+    
+    // Imprimir el texto de la consulta y el número del remitente en la consola
+    console.log("Texto de la consulta:", text);
+    console.log("Número del remitente:", senderNumber);
+});
 
 
 
