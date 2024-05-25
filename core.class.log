@@ -1,0 +1,108 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492612533741@s.whatsapp.net',
+    fromMe: false,
+    id: '18807DD6B79B96519541207D3E93793E',
+    participant: undefined
+  },
+  messageTimestamp: 1716668550,
+  pushName: 'Luis',
+  broadcast: false,
+  message: Message {
+    conversation: 'Hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Hola',
+  from: '5492612533741'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_d234f411-5e3c-4c3a-a161-6431648d2872',
+  keyword: 'key_44974b41-e4ff-43da-95cf-e167064846d1',
+  answer: 'Realiza tu pregunta:',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'acc60bf25c45ef8fe0e7d3ae000d766c'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492612533741@s.whatsapp.net',
+    fromMe: false,
+    id: 'E899E03CA81D693A788151FAE3E8D9F6',
+    participant: undefined
+  },
+  messageTimestamp: 1716668553,
+  pushName: 'Luis',
+  broadcast: false,
+  message: Message {
+    conversation: 'Hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Hola',
+  from: '5492612533741'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492612533741@s.whatsapp.net',
+    fromMe: false,
+    id: '0D2705F366527D032EC83391CEE39B93',
+    participant: undefined
+  },
+  messageTimestamp: 1716668558,
+  pushName: 'Luis',
+  broadcast: false,
+  message: Message {
+    audioMessage: AudioMessage {
+      url: 'https://mmg.whatsapp.net/v/t62.7117-24/32323278_3702177840024200_5330384082300420332_n.enc?ccb=11-4&oh=01_Q5AaIABrd_SxB7hDxtgiDSIniZ1mGII6mMOp8IKkH8gauf1V&oe=6679B09D&_nc_sid=5e03e0&mms3=true',
+      mimetype: 'audio/ogg; codecs=opus',
+      fileSha256: [Uint8Array],
+      fileLength: [Long],
+      seconds: 1,
+      ptt: true,
+      mediaKey: [Uint8Array],
+      fileEncSha256: [Uint8Array],
+      directPath: '/v/t62.7117-24/32323278_3702177840024200_5330384082300420332_n.enc?ccb=11-4&oh=01_Q5AaIABrd_SxB7hDxtgiDSIniZ1mGII6mMOp8IKkH8gauf1V&oe=6679B09D&_nc_sid=5e03e0',
+      mediaKeyTimestamp: [Long],
+      waveform: [Uint8Array]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '_event_voice_note__57115e00-0bb9-4e60-a3aa-7c9fe4c4fa50',
+  from: '5492612533741'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_2537312a-dd7f-4f97-9660-f2d36d824a82',
+  keyword: 'key_c4f1397b-5a43-48f6-a4f4-60754921f8d5',
+  answer: 'Esta es una nota de voz',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '4651b706284a5364b491dd72ed66bff2'
+}
