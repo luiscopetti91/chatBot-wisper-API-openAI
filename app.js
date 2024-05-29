@@ -33,7 +33,7 @@ const promptConsultas = fs.readFileSync(pathConsultas, "utf8");
 
 
 
-const flowVoice = addKeyword(EVENTS.VOICE_NOTE).addAnswer("Escuchando...", null, async (ctx, ctxFn) => {
+const flowVoice = addKeyword(EVENTS.VOICE_NOTE).addAnswer("Escuchando...👂🏻🔊", null, async (ctx, ctxFn) => {
     // Obtener el texto de la nota de voz utilizando el manejador de inteligencia artificial
     const text = await handlerAI(ctx);
 
@@ -50,7 +50,7 @@ const flowVoice = addKeyword(EVENTS.VOICE_NOTE).addAnswer("Escuchando...", null,
     const name = ctx.pushName;
     
     // Construir el mensaje de respuesta que incluye la respuesta del modelo y el número del remitente
-    const responseMessage = `${answer.content}\n\nVuelve pronto ${name}`;
+    const responseMessage = `  Aquí esta tu respuesta ${name}: \n\n${answer.content}\n\nVuelve pronto ${name}`;
     
     // Enviar el mensaje de respuesta al remitente
     await ctxFn.flowDynamic(responseMessage);
@@ -63,7 +63,6 @@ const flowVoice = addKeyword(EVENTS.VOICE_NOTE).addAnswer("Escuchando...", null,
 });
 
 
-
 // Definición del flujo principal del bot
 const principal = addKeyword(EVENTS.WELCOME)
     // Respuestas automáticas al ingresar un texto
@@ -73,15 +72,15 @@ const principal = addKeyword(EVENTS.WELCOME)
         const consulta = ctx.body;
         // Genera una respuesta utilizando el módulo chatGPT
         const answer = await chat(prompt, consulta);
-           // Obtener el número del remitente del contexto
-    const name = ctx.pushName;
-    
-    // Construir el mensaje de respuesta que incluye la respuesta del modelo y el número del remitente
-    const responseMessage = `${answer.content}\n\nVuelve pronto ${name}`;
+        
+        // Obtener el nombre del remitente del contexto
+        const name = ctx.pushName;
+        
+        // Construir el mensaje de respuesta que incluye la respuesta del modelo y el nombre del remitente
+        const responseMessage = `  Aquí esta tu respuesta ${name}: \n\n${answer.content}\n\nVuelve pronto ${name}`;
+        
         // Envía la respuesta al usuario
         await ctxFn.flowDynamic(responseMessage);
-       // console.log("Número del remitente:", name);
-      
     });
     
 
