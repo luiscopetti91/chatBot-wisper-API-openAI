@@ -20,6 +20,7 @@
         "@whiskeysockets/baileys": "6.5.0",
         "cache-manager": "5.2.4",
         "dotenv": "^16.4.5",
+        "mongodb": "^6.6.2",
         "openai": "^3.3.0",
         "pdf-parse": "^1.1.1",
         "wa-sticker-formatter": "4.4.4"

@@ -7,8 +7,11 @@ const QRPortalWeb = require('@bot-whatsapp/portal');
 // Importa el proveedor Baileys, que permite la conexión con WhatsApp utilizando el protocolo baileys
 const BaileysProvider = require('@bot-whatsapp/provider/baileys');
 
+//mongoDB
+const MongoAdapter = require('@bot-whatsapp/database/mongo')
+
 // Importa el adaptador Mock, utilizado para simular una base de datos en memoria para pruebas y desarrollo
-const MockAdapter = require('@bot-whatsapp/database/mock');
+//const MockAdapter = require('@bot-whatsapp/database/mock');
 
 // Importa el módulo 'path', que proporciona utilidades para trabajar con rutas de archivos y directorios
 const path = require("path");
@@ -44,17 +47,19 @@ const flowVoice = addKeyword(EVENTS.VOICE_NOTE).addAnswer("Escuchando...", null,
     const answer = await chat(prompt, consulta);
     
     // Obtener el número del remitente del contexto
-    const senderNumber = ctx.from;
+    const name = ctx.pushName;
     
     // Construir el mensaje de respuesta que incluye la respuesta del modelo y el número del remitente
-    const responseMessage = `${answer.content}\n\nNúmero del remitente: ${senderNumber}`;
+    const responseMessage = `${answer.content}\n\nVuelve pronto ${name}`;
     
     // Enviar el mensaje de respuesta al remitente
     await ctxFn.flowDynamic(responseMessage);
     
     // Imprimir el texto de la consulta y el número del remitente en la consola
-    console.log("Texto de la consulta:", text);
-    console.log("Número del remitente:", senderNumber);
+   // console.log("Texto de la consulta:", text);
+    // console.log("Número del remitente:", name);
+    
+   
 });
 
 
@@ -68,9 +73,14 @@ const principal = addKeyword(EVENTS.WELCOME)
         const consulta = ctx.body;
         // Genera una respuesta utilizando el módulo chatGPT
         const answer = await chat(prompt, consulta);
+           // Obtener el número del remitente del contexto
+    const name = ctx.pushName;
+    
+    // Construir el mensaje de respuesta que incluye la respuesta del modelo y el número del remitente
+    const responseMessage = `${answer.content}\n\nVuelve pronto ${name}`;
         // Envía la respuesta al usuario
-        await ctxFn.flowDynamic(answer.content);
-
+        await ctxFn.flowDynamic(responseMessage);
+       // console.log("Número del remitente:", name);
       
     });
     
@@ -78,7 +88,10 @@ const principal = addKeyword(EVENTS.WELCOME)
 // Función principal que inicializa el bot
 const main = async () => {
     // Inicializa el adaptador de la base de datos
-    const adapterDB = new MockAdapter();
+    const adapterDB = new MongoAdapter({
+        dbUri: process.env.MONGO_DB_URI,
+        dbName: "YoutubeTest"
+    })
     // Crea el flujo del bot
     const adapterFlow = createFlow([principal, flowVoice]);
     // Crea el proveedor de mensajes

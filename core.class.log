@@ -2,10 +2,10 @@
   key: {
     remoteJid: '5492612533741@s.whatsapp.net',
     fromMe: false,
-    id: '545F12E62730137E67953C131ADFDFEA',
+    id: 'A4C4167E4604CFD2426EEF08061F1D81',
     participant: undefined
   },
-  messageTimestamp: 1716675423,
+  messageTimestamp: 1716987261,
   pushName: 'Luis',
   broadcast: false,
   message: Message {
@@ -19,8 +19,8 @@
   from: '5492612533741'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_d5955d61-a164-4e7d-8e1f-70a36e4b38e6',
-  keyword: 'key_65b40760-bb88-4657-a18d-508fb294ea68',
+  ref: 'ans_dac70cc2-fbbb-426a-8624-4c410e8d6dff',
+  keyword: 'key_b7f53bf5-4602-44e8-8305-d098721c072e',
   answer: 'Realiza tu pregunta:',
   options: {
     media: null,
@@ -34,16 +34,16 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '9642edd0ac818692cecceb1c68162ddd'
+  refSerialize: '12121c808aa67bb321fdd1d1cdd482e0'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5492612533741@s.whatsapp.net',
     fromMe: false,
-    id: '8B67ABE82D449EE3A946EBF5C260841A',
+    id: '10FC31941CA28C46A513223B2C068AD0',
     participant: undefined
   },
-  messageTimestamp: 1716675426,
+  messageTimestamp: 1716987263,
   pushName: 'Luis',
   broadcast: false,
   message: Message {
@@ -60,42 +60,30 @@
   key: {
     remoteJid: '5492612533741@s.whatsapp.net',
     fromMe: false,
-    id: 'D8B2E6FFB88557E59F21FCDA0D9B9FD8',
+    id: '80BDF1EBF52F3395A44059454E65613D',
     participant: undefined
   },
-  messageTimestamp: 1716675442,
+  messageTimestamp: 1716987272,
   pushName: 'Luis',
   broadcast: false,
   message: Message {
-    audioMessage: AudioMessage {
-      url: 'https://mmg.whatsapp.net/v/t62.7117-24/40350825_1608042869972586_5265556090883794740_n.enc?ccb=11-4&oh=01_Q5AaIFFv-h-drFRw0G54j79vrCOF3w-uGKiJHJ2Bq3QHd9mU&oe=6679D8C3&_nc_sid=5e03e0&mms3=true',
-      mimetype: 'audio/ogg; codecs=opus',
-      fileSha256: [Uint8Array],
-      fileLength: [Long],
-      seconds: 2,
-      ptt: true,
-      mediaKey: [Uint8Array],
-      fileEncSha256: [Uint8Array],
-      directPath: '/v/t62.7117-24/40350825_1608042869972586_5265556090883794740_n.enc?ccb=11-4&oh=01_Q5AaIFFv-h-drFRw0G54j79vrCOF3w-uGKiJHJ2Bq3QHd9mU&oe=6679D8C3&_nc_sid=5e03e0',
-      mediaKeyTimestamp: [Long],
-      waveform: [Uint8Array]
-    },
+    conversation: 'Hola',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: '_event_voice_note__073eef3b-1efe-43db-9ed2-080c49cbfdeb',
+  body: 'Hola',
   from: '5492612533741'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_0ec89054-ab1a-4e37-a027-3589f8c81f33',
-  keyword: 'key_45d22dd0-107f-42d0-9a8e-2f24a94e2e56',
-  answer: 'Escuchando...',
+  ref: 'ans_dac70cc2-fbbb-426a-8624-4c410e8d6dff',
+  keyword: 'key_b7f53bf5-4602-44e8-8305-d098721c072e',
+  answer: 'Realiza tu pregunta:',
   options: {
     media: null,
     buttons: [],
-    capture: false,
+    capture: true,
     child: null,
     delay: 0,
     idle: null,
@@ -104,5 +92,25 @@
     keyword: {},
     callback: true
   },
-  refSerialize: 'e89c01c355520c1e2f3e04f5aedbec51'
+  refSerialize: '12121c808aa67bb321fdd1d1cdd482e0'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492612533741@s.whatsapp.net',
+    fromMe: false,
+    id: 'C0B06957EA110EE5C376DFEF53C2CC08',
+    participant: undefined
+  },
+  messageTimestamp: 1716987277,
+  pushName: 'Luis',
+  broadcast: false,
+  message: Message {
+    conversation: 'Hola que es la pancreatitis',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Hola que es la pancreatitis',
+  from: '5492612533741'
 }
