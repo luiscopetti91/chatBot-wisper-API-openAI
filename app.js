@@ -36,33 +36,22 @@ const promptConsultas = fs.readFileSync(pathConsultas, "utf8");
 const flowVoice = addKeyword(EVENTS.VOICE_NOTE).addAnswer("Escuchando...👂🏻🔊", null, async (ctx, ctxFn) => {
     // Obtener el texto de la nota de voz utilizando el manejador de inteligencia artificial
     const text = await handlerAI(ctx);
-
-    // Cargar el prompt para las consultas
+  // Cargar el prompt para las consultas
     const prompt = promptConsultas;
-
-    // Combinar el texto de la nota de voz y el prompt para formar la consulta completa
+  // Combinar el texto de la nota de voz y el prompt para formar la consulta completa
     const consulta = text;
-
-    // Obtener la respuesta del modelo de chatGPT usando el prompt y la consulta
+  // Obtener la respuesta del modelo de chatGPT usando el prompt y la consulta
     const answer = await chat(prompt, consulta);
-    
-    // Obtener el número del remitente del contexto
+     // Obtener el número del remitente del contexto
     const name = ctx.pushName;
-    
-    // Construir el mensaje de respuesta que incluye la respuesta del modelo y el número del remitente
+     // Construir el mensaje de respuesta que incluye la respuesta del modelo y el número del remitente
     const responseMessage = `  Aquí esta tu respuesta ${name}: \n\n${answer.content}\n\nVuelve pronto ${name}`;
-    
     // Enviar el mensaje de respuesta al remitente
     await ctxFn.flowDynamic(responseMessage);
-    
-    // Imprimir el texto de la consulta y el número del remitente en la consola
+     // Imprimir el texto de la consulta y el número del remitente en la consola
    // console.log("Texto de la consulta:", text);
-    // console.log("Número del remitente:", name);
-    
-   
+    // console.log("Número del remitente:", name);  
 });
-
-
 // Definición del flujo principal del bot
 const principal = addKeyword(EVENTS.WELCOME)
     // Respuestas automáticas al ingresar un texto
@@ -75,8 +64,7 @@ const principal = addKeyword(EVENTS.WELCOME)
         
         // Obtener el nombre del remitente del contexto
         const name = ctx.pushName;
-        
-        // Construir el mensaje de respuesta que incluye la respuesta del modelo y el nombre del remitente
+         // Construir el mensaje de respuesta que incluye la respuesta del modelo y el nombre del remitente
         const responseMessage = `  Aquí esta tu respuesta ${name}: \n\n${answer.content}\n\nVuelve pronto ${name}`;
         
         // Envía la respuesta al usuario

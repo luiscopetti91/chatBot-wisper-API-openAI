@@ -2,25 +2,29 @@
   key: {
     remoteJid: '5492612533741@s.whatsapp.net',
     fromMe: false,
-    id: 'ECF9387FC6E438542CCF03C5956B0479',
+    id: '3EB0D8CA19C0AA039D4D37',
     participant: undefined
   },
-  messageTimestamp: 1716990853,
+  messageTimestamp: 1718289474,
   pushName: 'Luis',
   broadcast: false,
   message: Message {
-    conversation: 'Hola',
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'hola',
+      contextInfo: [ContextInfo],
+      inviteLinkGroupTypeV2: 0
+    },
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'Hola',
+  body: 'hola',
   from: '5492612533741'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_c308ce48-ed49-4a96-b523-a3d7820eec2e',
-  keyword: 'key_7a615ae8-8057-4d28-a87d-3cdc18edf30f',
+  ref: 'ans_f7a205f7-c2ed-4dcc-b480-182ecf996ab0',
+  keyword: 'key_3df074a4-467f-4266-8c98-c04467ae846b',
   answer: 'Realiza tu pregunta:',
   options: {
     media: null,
@@ -34,75 +38,29 @@
     keyword: {},
     callback: true
   },
-  refSerialize: 'b58cba0a995468fa9b98596b7f310065'
+  refSerialize: '29f9169c6e9842adc8fdb9cfc84ff9b9'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5492612533741@s.whatsapp.net',
     fromMe: false,
-    id: '41870D83AB84AC93599104B91AD5A23E',
+    id: '3EB044F573804EE5AC0939',
     participant: undefined
   },
-  messageTimestamp: 1716990854,
+  messageTimestamp: 1718289476,
   pushName: 'Luis',
   broadcast: false,
   message: Message {
-    conversation: 'Hola',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Hola',
-  from: '5492612533741'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5492612533741@s.whatsapp.net',
-    fromMe: false,
-    id: 'B91DA555CD97EA983CC3102DE548AB4B',
-    participant: undefined
-  },
-  messageTimestamp: 1716990871,
-  pushName: 'Luis',
-  broadcast: false,
-  message: Message {
-    audioMessage: AudioMessage {
-      url: 'https://mmg.whatsapp.net/v/t62.7117-24/40852792_2135815006773853_5967706933467869947_n.enc?ccb=11-4&oh=01_Q5AaIJp8bBxtAa-8fIkLMG1xoIFgmPwhBfdltgDGO2xU2HDv&oe=667E9A41&_nc_sid=5e03e0&mms3=true',
-      mimetype: 'audio/ogg; codecs=opus',
-      fileSha256: [Uint8Array],
-      fileLength: [Long],
-      seconds: 1,
-      ptt: true,
-      mediaKey: [Uint8Array],
-      fileEncSha256: [Uint8Array],
-      directPath: '/v/t62.7117-24/40852792_2135815006773853_5967706933467869947_n.enc?ccb=11-4&oh=01_Q5AaIJp8bBxtAa-8fIkLMG1xoIFgmPwhBfdltgDGO2xU2HDv&oe=667E9A41&_nc_sid=5e03e0',
-      mediaKeyTimestamp: [Long],
-      waveform: [Uint8Array]
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'hola',
+      contextInfo: [ContextInfo],
+      inviteLinkGroupTypeV2: 0
     },
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: '_event_voice_note__d506fe0e-62e1-46ab-8283-041fc884afca',
+  body: 'hola',
   from: '5492612533741'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_fe433182-1143-41d6-abf5-928d63e8b30e',
-  keyword: 'key_b058f867-03b2-4709-96b6-86cdf9619e3b',
-  answer: 'Escuchando...',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '8d1c89b73223c9c052a7d1543f677dd2'
 }
